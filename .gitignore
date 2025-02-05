@@ -2,3 +2,5 @@ vendor/
 .php-cs-fixer.cache
 .phpunit.cache/
 composer.lock
+build_*/*
+/.idea

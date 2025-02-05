@@ -1,0 +1,35 @@
+name: Deploy Jigsaw Site
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4' # Change if needed
+          tools: composer
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-dev --prefer-dist --no-progress --no-interaction
+
+      - name: Build Jigsaw site
+        run: vendor/bin/jigsaw build production
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build_production
+          keep_files: false
+          force_orphan: true
