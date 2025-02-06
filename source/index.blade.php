@@ -97,7 +97,7 @@
             </div>
         </section>
 
-        <section id="faq" class="bg-gray-50 lg:py-24">
+        <section id="faq" class="bg-gray-50 py-24">
             <x-container>
                 <div class="flex flex-col gap-8">
                     <h2>Veelgestelde vragen</h2>

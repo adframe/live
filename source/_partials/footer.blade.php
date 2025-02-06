@@ -4,7 +4,7 @@
             <div class="flex flex-row items-center justify-between">
                 <img src="/assets/images/logo.svg" alt="AdFrame Logo" class="h-10">
 
-                <ul class="flex flex-row gap-4">
+                <ul class="flex flex-col gap-2 lg:flex-row lg:gap-4">
                     <a href="https://tiktok.com/@adframe">
                         <li class="text-white hover:underline">Privacybeleid</li>
                     </a>

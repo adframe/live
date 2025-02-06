@@ -5,7 +5,10 @@
                  alt="AdFrame Logo" class="h-10">
 
             <img src="/assets/images/tiktok-creator-network-badge.svg"
-                 alt="TikTok LIVE Creator Network Badge" class="h-8">
+                 alt="TikTok LIVE Creator Network Badge" class="hidden h-8 lg:block">
+
+            <img src="/assets/images/tiktok-creator-network-badge-simple.svg"
+                 alt="TikTok LIVE Creator Network Badge" class="block h-8 lg:hidden">
         </div>
     </x-container>
 </header>
